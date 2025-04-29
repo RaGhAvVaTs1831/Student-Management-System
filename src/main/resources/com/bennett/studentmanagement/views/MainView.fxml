@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.bennett.studentmanagement.controller.MainController"
+      spacing="20"
+      styleClass="main-container">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <HBox spacing="20" alignment="CENTER_LEFT">
+        <Label text="Bennett University" styleClass="title-label">
+            <font>
+                <Font size="24" style="BOLD"/>
+            </font>
+        </Label>
+        <Label text="Student Management System" styleClass="subtitle-label">
+            <font>
+                <Font size="18"/>
+            </font>
+        </Label>
+    </HBox>
+
+    <HBox spacing="20">
+        <Button text="Add Student" styleClass="action-button" onAction="#handleAddStudent"/>
+        <Button text="View All Students" styleClass="action-button" onAction="#handleViewAllStudents"/>
+        <Button text="Search Student" styleClass="action-button" onAction="#handleSearchStudent"/>
+    </HBox>
+
+    <TableView fx:id="studentTable" styleClass="data-table">
+        <columns>
+            <TableColumn fx:id="admissionNumberColumn" text="Admission Number" prefWidth="150"/>
+            <TableColumn fx:id="firstNameColumn" text="First Name" prefWidth="120"/>
+            <TableColumn fx:id="lastNameColumn" text="Last Name" prefWidth="120"/>
+            <TableColumn fx:id="emailColumn" text="Email" prefWidth="200"/>
+            <TableColumn fx:id="departmentColumn" text="Department" prefWidth="150"/>
+            <TableColumn fx:id="programColumn" text="Program" prefWidth="150"/>
+            <TableColumn fx:id="semesterColumn" text="Semester" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <StackPane fx:id="contentArea" VBox.vgrow="ALWAYS">
+        <!-- Content will be dynamically loaded here -->
+    </StackPane>
+
+</VBox> 

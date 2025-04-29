@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.bennett.studentmanagement.controller.StudentFormController"
+      spacing="15"
+      styleClass="form-container">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <GridPane vgap="10" hgap="10">
+        <Label text="Admission Number:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="admissionNumberField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="First Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="firstNameField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Last Name:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="lastNameField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Email:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="emailField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Phone Number:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="phoneNumberField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Department:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="departmentComboBox" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        <Label text="Program:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="programComboBox" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+        <Label text="Semester:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="semesterComboBox" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+        <Label text="Address:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+        <TextArea fx:id="addressField" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+        <Label text="Date of Birth:" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="dateOfBirthPicker" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Save" styleClass="save-button" onAction="#handleSave"/>
+        <Button text="Cancel" styleClass="cancel-button" onAction="#handleCancel"/>
+    </HBox>
+
+    <Label fx:id="errorLabel" styleClass="error-label" visible="false"/>
+
+</VBox> 

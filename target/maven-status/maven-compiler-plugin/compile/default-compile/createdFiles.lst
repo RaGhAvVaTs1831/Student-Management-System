@@ -1,0 +1,5 @@
+com/bennett/studentmanagement/model/Student.class
+com/bennett/studentmanagement/Main.class
+com/bennett/studentmanagement/util/DatabaseUtil.class
+com/bennett/studentmanagement/controller/StudentFormController.class
+com/bennett/studentmanagement/controller/MainController.class
